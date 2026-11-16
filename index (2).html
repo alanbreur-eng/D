@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADSE Dental Clinic | San Luis Río Colorado</title>
+<meta name="description" content="ADSE Dental Clinic: odontología general, estética y especialidades. Reserva hoy mismo tu cita por WhatsApp.">
+<meta name="theme-color" content="#4F5560">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { sans: ['"Plus Jakarta Sans"','system-ui','sans-serif'], serif: ['"Cormorant Garamond"','Georgia','serif'] },
+    colors: { slate2: '#4F5560', slate3: '#3A3F48', sky2: '#4A9BD9', sky3: '#7DB9E8', mist: '#F4F6F8' }
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+  .grad-text { background: linear-gradient(90deg,#4A9BD9,#B9C2CC); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .no-scrollbar::-webkit-scrollbar { display: none } .no-scrollbar { scrollbar-width: none }
+  @keyframes pulseRing { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)} 70%{box-shadow:0 0 0 16px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+  .wa-pulse { animation: pulseRing 2.2s infinite; }
+  .tab-on { background:#4F5560; color:#fff; }
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} .wa-pulse{animation:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body class="font-sans text-slate3 bg-white antialiased">
+
+<!-- HEADER -->
+<header class="fixed top-0 inset-x-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-2" aria-label="ADSE Dental Clinic">
+      <span data-logo class="w-8 h-9 block"></span>
+      <span class="leading-none">
+        <span class="block font-serif font-bold text-2xl tracking-wide text-slate2">ADSE</span>
+        <span class="block text-[9px] font-semibold tracking-[.3em] text-sky2 -mt-0.5">DENTAL CLINIC</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+      <a href="#servicios" class="hover:text-sky2">Servicios</a>
+      <a href="#resenas" class="hover:text-sky2">Reseñas</a>
+      <a href="#contacto" class="hover:text-sky2">Contacto</a>
+      <a data-wa href="#" target="_blank" rel="noopener" class="bg-slate2 text-white px-5 py-2.5 rounded-full hover:bg-slate3">Reserva tu cita</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden w-11 h-11 grid place-items-center rounded-xl hover:bg-slate-100" aria-label="Abrir menú" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 pb-4 pt-2 space-y-1">
+    <a href="#servicios" class="block py-3 px-3 rounded-xl font-semibold active:bg-mist">Servicios</a>
+    <a href="#resenas" class="block py-3 px-3 rounded-xl font-semibold active:bg-mist">Reseñas</a>
+    <a href="#contacto" class="block py-3 px-3 rounded-xl font-semibold active:bg-mist">Contacto</a>
+    <a data-wa href="#" target="_blank" rel="noopener" class="block text-center bg-slate2 text-white py-3.5 rounded-xl font-bold mt-2">Reservar por WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="inicio" class="relative pt-28 pb-20 overflow-hidden bg-slate2 text-white">
+  <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-sky2/30 blur-3xl"></div>
+  <div class="absolute bottom-0 -left-24 w-72 h-72 rounded-full bg-white/10 blur-3xl"></div>
+  <div class="relative max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div class="reveal text-center md:text-left">
+      <span class="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-sky3"></span> San Luis Río Colorado, Sonora
+      </span>
+      <h1 class="mt-5 font-serif font-bold text-5xl sm:text-6xl leading-[1.05]">Reserva hoy mismo<br><span class="grad-text" style="background-image:linear-gradient(90deg,#7DB9E8,#E4E9EE)">tu cita</span></h1>
+      <p class="mt-4 text-lg text-white/80 max-w-md mx-auto md:mx-0">Odontología general, estética y especialidades con trato honesto, humano y muy limpio.</p>
+      <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+        <a data-wa href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-sky2 text-white font-bold px-7 py-4 rounded-2xl shadow-lg shadow-sky2/30 hover:bg-sky3 active:scale-[.98] transition">
+          <span data-icon="wa" class="w-5 h-5"></span> Reservar por WhatsApp
+        </a>
+        <a href="#servicios" class="inline-flex items-center justify-center font-bold px-7 py-4 rounded-2xl border-2 border-white/25 hover:bg-white/10 transition">Ver servicios</a>
+      </div>
+      <div class="mt-8 flex items-center gap-3 justify-center md:justify-start text-sm text-white/80">
+        <span class="text-amber-300 tracking-widest">★★★★★</span> Pacientes que nos recomiendan
+      </div>
+    </div>
+    <div class="reveal flex justify-center">
+      <div class="relative w-64 h-72 sm:w-80 sm:h-96 rounded-[3rem] bg-white/5 border border-white/10 grid place-items-center">
+        <span data-logo="big" class="w-40 sm:w-52 block"></span>
+        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white text-slate2 text-xs font-extrabold px-4 py-2 rounded-full shadow-lg whitespace-nowrap">Av. Zaragoza 7 y 8 #710B</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center max-w-xl mx-auto reveal">
+      <p class="text-sm font-bold text-sky2 uppercase tracking-widest">Servicios</p>
+      <h2 class="mt-2 font-serif font-bold text-4xl sm:text-5xl text-slate2">Todo para tu sonrisa</h2>
+    </div>
+    <div id="tabs" class="mt-8 flex gap-2 overflow-x-auto no-scrollbar justify-start sm:justify-center -mx-4 px-4" role="tablist"></div>
+    <div id="serviceList" class="mt-6 grid sm:grid-cols-2 gap-3"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="px-4">
+  <div class="max-w-4xl mx-auto rounded-[2rem] bg-gradient-to-br from-slate2 to-slate3 text-white text-center px-6 py-12 reveal">
+    <h2 class="font-serif font-bold text-3xl sm:text-4xl">¿Tienes dudas sobre tu tratamiento?</h2>
+    <p class="mt-2 text-white/80">Te las resolvemos desde el primer mensaje.</p>
+    <a data-wa href="#" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-white text-slate2 font-extrabold px-8 py-4 rounded-2xl hover:scale-[1.02] active:scale-[.98] transition">
+      <span data-icon="wa" class="w-5 h-5 text-[#25D366]"></span> Escríbenos ahora
+    </a>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section id="resenas" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-xl mx-auto reveal">
+      <p class="text-sm font-bold text-sky2 uppercase tracking-widest">Reseñas</p>
+      <h2 class="mt-2 font-serif font-bold text-4xl sm:text-5xl text-slate2">Lo que dicen nuestros pacientes</h2>
+      <p class="mt-3 text-slate-500">Recomendaciones reales publicadas en Facebook.</p>
+    </div>
+    <div id="reviews" class="mt-10 flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 pb-2"></div>
+    <p class="mt-3 text-center text-xs text-slate-400 md:hidden">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-16 bg-mist">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-xl mx-auto reveal">
+      <p class="text-sm font-bold text-sky2 uppercase tracking-widest">Contacto</p>
+      <h2 class="mt-2 font-serif font-bold text-4xl sm:text-5xl text-slate2">Visítanos</h2>
+    </div>
+    <div class="mt-10 grid gap-5 md:grid-cols-2">
+      <div class="reveal rounded-3xl bg-white border border-slate-100 shadow-sm p-6 space-y-5" id="contactCard"></div>
+      <div class="reveal rounded-3xl overflow-hidden border border-slate-100 shadow-sm min-h-[320px] bg-white relative">
+        <iframe id="mapFrame" title="Ubicación de ADSE Dental Clinic" class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate3 text-white/80 pt-12 pb-28 md:pb-12">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <span data-logo="big" class="w-12 block mx-auto"></span>
+    <p class="mt-2 font-serif font-bold text-2xl text-white tracking-wide">ADSE</p>
+    <p class="text-[10px] tracking-[.3em] text-sky3 font-semibold">DENTAL CLINIC</p>
+    <div class="mt-6 flex justify-center gap-3" id="socials"></div>
+    <p class="mt-8 text-xs text-white/50">© <span id="year"></span> ADSE Dental Clinic. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a data-wa href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"
+   class="wa-pulse fixed bottom-5 right-5 z-50 w-16 h-16 rounded-full bg-[#25D366] text-white grid place-items-center shadow-xl hover:scale-105 active:scale-95 transition">
+  <span data-icon="wa" class="w-8 h-8"></span>
+</a>
+
+<script>
+/* ============ CONFIGURACIÓN: edita solo este bloque ============ */
+const CONFIG = {
+  clinic: "ADSE Dental Clinic",
+  whatsapp: "526531640165",                      // +52 653 164 0165
+  phoneLabel: "653 164 0165",
+  email: "adsedentalcontact@gmail.com",
+  address: "Av. Zaragoza 7 y 8 #710B, San Luis Río Colorado, Sonora",
+  mapsLink: "https://www.google.com/maps/search/?api=1&query=ADSE+Dental+Clinic+Av+Zaragoza+710B+San+Luis+Rio+Colorado",
+  hours: ["Pendiente: agrega tus horarios aquí"],   // ✏️ no vienen en las capturas
+  instagram: "https://instagram.com/adsedentalclinic",
+  facebook:  "https://www.facebook.com/search/top?q=ADSE%20Dental%20Clinic", // ✏️ pega el link directo de la página
+  website:   "https://adsedentalclinic.com",
+
+  categories: [
+    { id: "general", name: "Odontología general", items: [
+      ["brush","Limpieza dental"],["sparkle","Blanqueamiento"],["tooth","Resina"],["crown","Coronas"],
+      ["bridge","Puentes"],["guard","Guarda"],["extract","Extracciones"],["surgery","Cirugías"] ]},
+    { id: "estetica", name: "Odontología estética", items: [
+      ["sparkle","Carillas de porcelana"],["smile","Carillas inyectadas"],["tooth","Carillas de resina"],["smile","Bordes incisales"] ]},
+    { id: "especialidades", name: "Especialidades", items: [
+      ["bridge","Prótesis bucal","Coronas, puentes, prótesis total y removible."],
+      ["heart","Endodoncia"],
+      ["tooth","Periodoncia","Raspado y alisado radicular e injertos de encía."],
+      ["kid","Odontopediatría"],["braces","Ortodoncia"],["implant","Implantes"],
+      ["surgery","Cirugías","Muelas del juicio, frenectomía y más."] ]}
+  ],
+
+  reviews: [
+    { name: "Luxos Decor Decoración de Eventos", when: "Hace 2 días",
+      text: "Excelente atención. Nos da un trato muy honesto y humano con mucha sensibilidad para uno como paciente. Doctor muy recomendado." },
+    { name: "Melissa Perez", when: "Hace 12 h",
+      text: "Súper recomendado. Me quedé muy feliz con mi tratamiento, sin duda vuelvo." },
+    { name: "Luis Felix", when: "23 may",
+      text: "Me encantó el trato, todo muy relajado y el doc súper buena onda. Se nota que sabe lo que hace. ¡Recomendado al 100!" },
+    { name: "Luis Gaxiola", when: "23 may",
+      text: "Muy buena atención, me resolvió todas mis dudas desde un inicio, muy limpio todo también." }
+  ]
+};
+
+/* ============ NO NECESITAS EDITAR DE AQUÍ PARA ABAJO ============ */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const waLink = (msg) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+const stroke = (p) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+
+const ICONS = {
+  wa: `<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.38 4 15c0 2.27.64 4.4 1.75 6.2L4 29l8.02-1.7A12 12 0 0 0 16.04 27C22.66 27 28 21.62 28 15S22.66 3 16.04 3Zm0 21.9c-1.9 0-3.7-.52-5.25-1.43l-.38-.22-4.76 1.01 1.04-4.62-.25-.4A9.8 9.8 0 0 1 6.2 15c0-5.42 4.42-9.82 9.84-9.82S25.8 9.58 25.8 15c0 5.4-4.36 9.9-9.76 9.9Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.48.71.3 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.4.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>`,
+  pin: stroke(`<path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>`),
+  clock: stroke(`<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>`),
+  phone: stroke(`<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>`),
+  mail: stroke(`<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>`),
+  ig: stroke(`<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/>`),
+  fb: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.6V21h2.9Z"/></svg>`,
+  web: stroke(`<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>`),
+  sparkle: stroke(`<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7L19 17Z"/>`),
+  heart: stroke(`<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/>`),
+  tooth: stroke(`<path d="M7 3c-2.5 0-4 2-4 4.500 0 2 1 3.500 1.500 5.500.6 2.500.7 7 2.500 7 1.600 0 1.400-4.500 3-4.500h2c1.600 0 1.400 4.500 3 4.500 1.800 0 1.900-4.500 2.500-7C20 11 21 9.500 21 7.500 21 5 19.500 3 17 3c-1.800 0-2.500 1-5 1S8.800 3 7 3Z"/>`),
+  smile: stroke(`<circle cx="12" cy="12" r="9"/><path d="M8 14s1.500 2.500 4 2.500S16 14 16 14"/><path d="M9 9.500h.01M15 9.500h.01"/>`),
+  kid: stroke(`<circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/>`),
+  brush: stroke(`<path d="M7 3v8M5 3v4a2 2 0 0 0 4 0V3"/><rect x="13" y="4" width="5" height="16" rx="1.500"/><path d="M13 8h5"/>`),
+  crown: stroke(`<path d="M6 4h12l-1 6a5 5 0 0 1-10 0L6 4Z"/><path d="M9 15l1 6M15 15l-1 6"/>`),
+  bridge: stroke(`<path d="M3 8c2-3 5-3 6 0 1-3 5-3 6 0 1-3 4-3 6 0v4H3V8Z"/><path d="M5 12v7M19 12v7"/>`),
+  guard: stroke(`<path d="M4 14c0-4 4-7 8-7s8 3 8 7c0 2-2 3-4 3-2 0-2-2-4-2s-2 2-4 2c-2 0-4-1-4-3Z"/>`),
+  extract: stroke(`<path d="M8 3c-2 0-3 2-3 4 0 3 1 5 1.500 8 .3 2 1 5 2 5s1-4 2-4 1 4 2 4 1.700-3 2-5c.5-3 1.500-5 1.500-8 0-2-1-4-3-4-1.500 0-2 .7-3 .7S9.500 3 8 3Z"/><path d="M17 3l3-1"/>`),
+  surgery: stroke(`<path d="M4 20h14"/><path d="M6 20c0-4-2-6-2-9a4 4 0 0 1 7-2 4 4 0 0 1 4 4c0 3-3 4-3 7"/><path d="M15 3l5 5M13 5l2-2M18 10l2-2"/>`),
+  braces: stroke(`<path d="M3 9c0-3 3-3 4.500-1.500C9 6 12 6 12 9v6c0 3-3 5-4.500 5S3 18 3 15V9Z"/><path d="M12 9c0-3 3-3 4.500-1.500C18 6 21 6 21 9v6c0 3-3 5-4.500 5S12 18 12 15"/><path d="M3 11h18"/>`),
+  implant: stroke(`<path d="M6 4h12c0 4-2 6-6 6S6 8 6 4Z"/><path d="M9 12h6M9 15h6M9 18h6M11 21h2"/>`)
+};
+
+/* Logo ADSE: diente con trazo en degradado azul-plata */
+const LOGO = `<svg viewBox="445 245 430 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo ADSE Dental Clinic">
+  <defs>
+    <linearGradient id="lgB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F8CEB"/><stop offset=".5" stop-color="#4FB0FF"/><stop offset="1" stop-color="#2A86E0"/></linearGradient>
+    <linearGradient id="lgS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3F5F7"/><stop offset="1" stop-color="#A9B1BA"/></linearGradient>
+  </defs>
+  <path d="M700 275 C600 262 482 268 470 322 C462 372 560 392 680 427 C780 457 802 500 782 550 C770 588 730 606 705 590 C682 572 666 546 646 546 C626 546 624 580 596 595 C564 608 528 572 494 478"
+        fill="none" stroke="url(#lgB)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M655 326 C690 290 760 256 826 262 C878 267 870 320 826 337 C790 348 744 337 712 322 C760 326 802 320 816 300 C800 284 740 290 655 326 Z" fill="url(#lgS)"/>
+</svg>`;
+
+$$('[data-logo]').forEach(el => el.innerHTML = LOGO);
+$$('[data-icon]').forEach(el => el.innerHTML = ICONS[el.dataset.icon]);
+$('#year').textContent = new Date().getFullYear();
+$$('[data-wa]').forEach(a => a.href = waLink(`Hola, quiero reservar una cita en ${CONFIG.clinic}.`));
+
+/* Servicios con pestañas */
+const tabs = $('#tabs'), list = $('#serviceList');
+function showCat(id) {
+  const cat = CONFIG.categories.find(c => c.id === id);
+  $$('button', tabs).forEach(b => {
+    const on = b.dataset.id === id;
+    b.classList.toggle('tab-on', on);
+    b.classList.toggle('bg-mist', !on);
+    b.setAttribute('aria-selected', on);
+  });
+  list.innerHTML = cat.items.map(([icon, name, desc]) => `
+    <a href="${waLink(`Hola, me interesa información sobre: ${name}. ¿Me pueden ayudar a agendar?`)}" target="_blank" rel="noopener"
+       class="group flex items-center gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm hover:shadow-md hover:border-sky2/40 active:scale-[.99] transition">
+      <span class="w-12 h-12 shrink-0 rounded-xl bg-mist text-sky2 grid place-items-center group-hover:bg-sky2 group-hover:text-white transition"><span class="w-6 h-6 block">${ICONS[icon]}</span></span>
+      <span class="flex-1 min-w-0">
+        <span class="block font-bold tracking-wide">${name}</span>
+        ${desc ? `<span class="block text-sm text-slate-500 leading-snug mt-0.5">${desc}</span>` : ''}
+      </span>
+      <span class="text-slate-300 group-hover:text-sky2 text-xl">›</span>
+    </a>`).join('');
+}
+tabs.innerHTML = CONFIG.categories.map(c =>
+  `<button role="tab" data-id="${c.id}" class="shrink-0 px-5 py-3 rounded-full text-sm font-bold bg-mist transition">${c.name}</button>`).join('');
+tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) showCat(b.dataset.id); });
+showCat(CONFIG.categories[0].id);
+
+/* Reseñas */
+$('#reviews').innerHTML = CONFIG.reviews.map(r => `
+  <figure class="snap-center shrink-0 w-[82%] sm:w-[60%] md:w-auto bg-slate2 text-white rounded-3xl p-6 flex flex-col">
+    <div class="text-amber-300 tracking-widest text-lg">★★★★★</div>
+    <blockquote class="mt-3 text-[15px] leading-relaxed text-white/90 flex-1">“${r.text}”</blockquote>
+    <figcaption class="mt-5 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-full bg-sky2 grid place-items-center font-extrabold">${r.name[0]}</span>
+      <span class="min-w-0"><span class="block font-bold text-sm truncate">${r.name}</span><span class="block text-xs text-white/60">Recomienda ADSE · ${r.when}</span></span>
+    </figcaption>
+  </figure>`).join('');
+
+/* Contacto */
+const row = (icon, title, body) => `
+  <div class="flex gap-4">
+    <span class="w-11 h-11 shrink-0 rounded-xl bg-mist text-sky2 grid place-items-center"><span class="w-5 h-5 block">${ICONS[icon]}</span></span>
+    <div class="min-w-0"><p class="font-bold">${title}</p><div class="text-slate-600 text-[15px]">${body}</div></div>
+  </div>`;
+$('#contactCard').innerHTML =
+  row('pin','Dirección', CONFIG.address) +
+  row('clock','Horarios', CONFIG.hours.map(h=>`<p>${h}</p>`).join('')) +
+  row('phone','Teléfono / WhatsApp', `<a class="underline decoration-sky2/40" href="tel:+${CONFIG.whatsapp}">${CONFIG.phoneLabel}</a>`) +
+  row('mail','Correo', `<a class="underline decoration-sky2/40 break-all" href="mailto:${CONFIG.email}">${CONFIG.email}</a>`) +
+  `<div class="grid grid-cols-2 gap-3 pt-1">
+     <a href="${CONFIG.mapsLink}" target="_blank" rel="noopener" class="text-center bg-slate2 text-white font-bold py-4 rounded-2xl hover:bg-slate3 active:scale-[.98] transition">Cómo llegar</a>
+     <a data-wa href="${waLink(`Hola, quiero reservar una cita en ${CONFIG.clinic}.`)}" target="_blank" rel="noopener" class="text-center bg-[#25D366] text-white font-bold py-4 rounded-2xl hover:opacity-90 active:scale-[.98] transition">WhatsApp</a>
+   </div>`;
+$('#mapFrame').src = "https://www.google.com/maps?q=" + encodeURIComponent("Av. Zaragoza 710B, San Luis Río Colorado, Sonora") + "&output=embed";
+
+/* Redes */
+const social = (href, icon, label) => `<a href="${href}" target="_blank" rel="noopener" aria-label="${label}" class="w-12 h-12 rounded-full bg-white/10 hover:bg-sky2 grid place-items-center transition"><span class="w-5 h-5 block text-white">${ICONS[icon]}</span></a>`;
+$('#socials').innerHTML = social(CONFIG.instagram,'ig','Instagram') + social(CONFIG.facebook,'fb','Facebook') + social(CONFIG.website,'web','Sitio web');
+
+/* Menú móvil */
+const btn = $('#menuBtn'), menu = $('#mobileMenu');
+btn.addEventListener('click', () => { const open = menu.classList.toggle('hidden') === false; btn.setAttribute('aria-expanded', open); });
+$$('#mobileMenu a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', false); }));
+
+/* Reveal al hacer scroll */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } }), { threshold: .12 });
+$$('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
